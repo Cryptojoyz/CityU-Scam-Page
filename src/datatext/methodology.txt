@@ -1,0 +1,50 @@
+## METHODOLOGY
+
+#### Objective
+This study aims to conduct real-time analysis of discussions related to scams on Hong Kong social media platforms. By daily updating the database with relevant posts from the BabyKingdom and LIHKG forums, the objective is to analyze information within the past week to answer the following research questions:
+1. What are the most popular scams?
+2. How do scammers use different technologies?
+3. How do scammers exploit new communication technologies to reach their targets?
+4. What are the language characteristics of scamming content?
+5. What are the most common appeals?
+6. What measures can be taken to help citizens fight scams?
+
+#### Data Collection
+- **Daily Updates:**
+  - Continuously update the database with scam-related posts from the BabyKingdom and LIHKG forums.
+  - Retain only the title, content, reply, post time, and URL of each forum post.
+
+#### Data Processing
+- **Batch Processing:**
+  - Retrieve data from the past week from the database and segment it into batches of ten comments each.
+  - Ensure each batch consists of a string of ten comments for consistent analysis.
+
+#### Analysis
+- **Analysis via GPT-4o:**
+  - Submit each batch to the GPT-4o model for detailed analysis.
+  - Collect the analysis results for each batch individually.
+
+#### Results Integration
+- **Checking Existing Results:**
+  - If no previous analysis results exist, store the current batch results as the primary analysis outcome.
+  - If previous analysis results are available, merge the current batch results with the existing ones and submit this merged data to GPT for deduplication and comprehensive analysis.
+
+#### Comprehensive Analysis
+- **Results Synthesis:**
+  - GPT will output an integrated analysis based on the combined data from the current and previous batches.
+  - Store the merged and deduplicated results as the updated analysis outcome.
+
+#### Iterative Processing
+- **Repetition:**
+  - Repeat the above steps for each data batch until all batches have been processed.
+
+#### Final Output
+- **Final Results:**
+  - Save the final comprehensive analysis results, ensuring they are complete, deduplicated, and thoroughly synthesized.
+
+By following this methodology, the study aims to produce real-time, accurate, and comprehensive insights into scam-related discussions on Hong Kong social media platforms, effectively addressing the specified research questions.
+
+
+
+
+
