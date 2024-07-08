@@ -11,11 +11,11 @@ const Menubarzh = dynamic(() => import('@/components/Menubarzh'), {
   loading: () => <Loading />,
   ssr: false, 
 });
-export default async function Chinese () {
 
-  const analysisData = await fetchanalysiszh();
-  const typicalcase = await fetchcontentzh();
+const analysisData = await fetchanalysiszh();
+const typicalcase = await fetchcontentzh();
 
+export default function Chinese () {
   return (
     <div>
     <Navbarzh />

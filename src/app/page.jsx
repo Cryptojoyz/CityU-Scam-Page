@@ -12,10 +12,10 @@ const Menubar = dynamic(() => import('@/components/Menubar'), {
   ssr: false, 
 });
 
+const analysisData = await fetchanalysis();
+const typicalcase = await fetchcontent();
 
-export default async function Home() {
-  const analysisData = await fetchanalysis();
-  const typicalcase = await fetchcontent();
+export default function Home() {
   return (
     <main>
       <Navbar />
