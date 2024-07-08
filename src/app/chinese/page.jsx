@@ -4,7 +4,7 @@ import Navbarzh from "@/components/Navbarzh";
 import {Maintitlezh} from "@/components/Maintitle";
 import { fetchanalysiszh, fetchcontentzh } from "@/lib/fetchcontent";
 import {ContactUszh} from "@/components/ContactUs.jsx";
-import Loading from '@/components/Loading';
+import Loading from '@/components/loading';
 
 // 动态导入 Menubar 组件，并在加载期间显示 Loading 组件
 const Menubarzh = dynamic(() => import('@/components/Menubarzh'), {
