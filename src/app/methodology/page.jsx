@@ -15,7 +15,7 @@ const MethodologyPage = () => {
       <Maintitle />
       <div className="flex flex-col items-center justify-center pt-4">
         <Image
-          className='w-auto h-auto'
+          className="w-auto h-auto"
           src="/methodology.png"
           alt="Methodology"
           width={800}

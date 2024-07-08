@@ -4,7 +4,7 @@ const ContactUs = () => {
         <div className="flex items-center justify-center bg-gray-900 w-screen">
           <p className="text-2xl text-white py-2">
             <a href="mailto:xf.liu@cityu.edu.hk">
-              <strong className="font-semibold">Contact US: xf.liu@cityu.edu.hk</strong>
+              <strong className="font-semibold">Contact: xf.liu@cityu.edu.hk</strong>
             </a>
           </p>
         </div>
