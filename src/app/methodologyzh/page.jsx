@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { fetchMethodzh } from '@/lib/fetchcontent';
 import ReactMarkdown from 'react-markdown'
 import {ContactUszh} from "@/components/ContactUs.jsx";
+import methopic from '/public/methodologyzh.png';
 
 const data = await fetchMethodzh();
 
@@ -16,10 +17,11 @@ const MethodologyPage = () => {
       <div className="flex flex-col items-center justify-center pt-4">
         <Image
           className='w-auto h-auto'
-          src="/methodologyzh.png"
+          src={methopic}
           alt="Methodology"
           width={800}
           height={600}
+          placeholder='blur'
         />
         <div className='prose'>
           <ReactMarkdown>{data}</ReactMarkdown>

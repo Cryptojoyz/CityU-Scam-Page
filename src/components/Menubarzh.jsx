@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef} from 'react'
 import ReactMarkdown from 'react-markdown'
+import Loading from '@/components/Loading';
 
 const buttons = [
     { name: '流行诈骗', id:2 },
@@ -29,6 +30,7 @@ const Menubarzh = ({ analysisData, typicalcase}) => {
     const [tooltipContent, setTooltipContent] = useState('');
     const [tooltipPosition, setTooltipPosition] = useState({ top: 0, left: 0 });
     const buttonRefs = useRef({})
+    const [isLoading, setIsLoading] = useState(true);
 
     const extractTitleAndContent = (content) => {
         const sectionTitleMatch = content.match(/^.*$/m);
@@ -40,7 +42,7 @@ const Menubarzh = ({ analysisData, typicalcase}) => {
     useEffect(() => {
         if (analysisData.length > 0) {
             const selectedContent = activeButton === 7 ? typicalcase : (analysisData[activeButton] || '');
-            console.log("这是提取的内容",selectedContent);
+            // console.log("这是提取的内容",selectedContent);
             if (activeButton === 7) {
                 setTitle('');
                 setContent(selectedContent);
@@ -49,6 +51,7 @@ const Menubarzh = ({ analysisData, typicalcase}) => {
                 setTitle(sectionTitle);
                 setContent(sectioncontent);
             }
+            setIsLoading(false);
         }
     }, [analysisData, activeButton, typicalcase]);
 
@@ -66,6 +69,10 @@ const Menubarzh = ({ analysisData, typicalcase}) => {
         setTooltipContent('');
         setTooltipPosition({ top: 0, left: 0 });
     };
+
+    if (isLoading) {
+        return <Loading />;
+    }
 
     return (
         <div className="flex flex-col justify-center pt-8">
