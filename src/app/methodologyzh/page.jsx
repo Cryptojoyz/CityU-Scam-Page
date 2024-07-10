@@ -15,14 +15,13 @@ const MethodologyPage = () => {
       <Navbarzh />
       <Maintitlezh />
       <div className="flex flex-col items-center justify-center pt-4">
-        <Image
-          className='w-auto h-auto'
-          src={methopic}
-          alt="Methodology"
-          width={800}
-          height={600}
-          placeholder='blur'
-        />
+        <div className="max-w-[1000px] h-auto">
+          <Image
+            src={methopic}
+            alt="Methodology"
+            placeholder='blur'
+          />
+        </div>
         <div className='prose'>
           <ReactMarkdown>{data}</ReactMarkdown>
         </div>
