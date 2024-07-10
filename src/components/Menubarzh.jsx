@@ -10,7 +10,8 @@ const buttons = [
     { name: '语言特点', id:4 },
     { name: '劝服手段', id:3 },
     { name: '诈骗防范', id: 5 },
-    { name: '典型案例', id: 7 },
+    { name: '心理漏洞', id: 7},
+    { name: '典型案例', id: 8 },
   ]
 
 const toolips = [
@@ -20,7 +21,8 @@ const toolips = [
     { name: '诈骗内容的语言特点', id:4 },
     { name: '骗子常用的诱骗方法', id:3 },
     { name: '帮助市民对抗诈骗的措施', id: 5 },
-    { name: '典型案例', id: 7 },
+    { name: '骗子常利用的漏洞有哪些？', id: 7},
+    { name: '典型案例', id: 8 },
   ]
 
 const Menubarzh = ({ analysisData, typicalcase}) => {
@@ -41,9 +43,9 @@ const Menubarzh = ({ analysisData, typicalcase}) => {
 
     useEffect(() => {
         if (analysisData.length > 0) {
-            const selectedContent = activeButton === 7 ? typicalcase : (analysisData[activeButton] || '');
+            const selectedContent = activeButton === 8 ? typicalcase : (analysisData[activeButton] || '');
             // console.log("这是提取的内容",selectedContent);
-            if (activeButton === 7) {
+            if (activeButton === 8) {
                 setTitle('');
                 setContent(selectedContent);
             } else {

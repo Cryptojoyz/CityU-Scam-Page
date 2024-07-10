@@ -10,7 +10,8 @@ const buttons = [
     { name: 'Language Characteristics', id:4 },
     { name: 'Common Appeals', id:3 },
     { name: 'Fight Scams', id: 5 },
-    { name: 'Typical Case', id: 7 },
+    { name: 'Common Vulnerabilities', id: 7 },
+    { name: 'Typical Case', id: 8 },
   ]
 
 const toolips = [
@@ -20,7 +21,8 @@ const toolips = [
     { name: 'Language Characteristics of Scam Content', id:4 },
     { name: 'Common Appeals Used by Scammers', id:3 },
     { name: 'Measures to Help Citizens Fight Scams', id: 5 },
-    { name: 'Typical Case', id: 7 },
+    { name: 'What are the common vulnerabilities exploited by scammers?', id: 7 },
+    { name: 'Typical Case', id: 8 },
   ]
 
 const Menubar = ({ analysisData, typicalcase}) => {
@@ -41,9 +43,9 @@ const Menubar = ({ analysisData, typicalcase}) => {
 
     useEffect(() => {
         if (analysisData.length > 0) {
-            const selectedContent = activeButton === 7 ? typicalcase : (analysisData[activeButton] || '');
+            const selectedContent = activeButton === 8 ? typicalcase : (analysisData[activeButton] || '');
             // console.log("这是提取的内容",selectedContent);
-            if (activeButton === 7) {
+            if (activeButton === 8) {
                 setTitle('');
                 setContent(selectedContent);
             } else {
@@ -103,7 +105,7 @@ const Menubar = ({ analysisData, typicalcase}) => {
                     })}
                     {tooltipContent && (
                         <div
-                            className="fixed bg-gray-200 text-gray-900 rounded shadow-lg px-4 py-2 hidden lg:block"
+                            className="fixed bg-gray-200 text-gray-900 rounded shadow-lg px-4 py-2 hidden lg:block whitespace-nowrap"
                             style={{ top: tooltipPosition.top, left: tooltipPosition.left, transform: 'translateX(-50%)'}}
                         >
                             {tooltipContent}
