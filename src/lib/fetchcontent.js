@@ -3,22 +3,22 @@ import fs from 'fs';
 
 export const fetchMethod = async () => {
     // noStore();
-    let data = fs.readFileSync('src/datatext/methodology.txt', 'utf8');
+    let data = fs.readFileSync('/root/cityuscampage/CityU-Scam-Page/src/datatext/methodology.txt', 'utf8');
     data = data.replace(/^## METHODOLOGY\s*\n*/, '');
     return data;
 }
 
 export const fetchMethodzh = async () => {
     // noStore();
-    const data = fs.readFileSync('src/datatext/methodologyzh.txt', 'utf8');
+    const data = fs.readFileSync('/root/cityuscampage/CityU-Scam-Page/src/datatext/methodologyzh.txt', 'utf8');
     return data;
 }
 
 export const fetchanalysis = async () => {
-    // noStore();
-    const data = fs.readFileSync('src/datatext/final_analysis.txt', 'utf8');
+    noStore();
+    const data = fs.readFileSync('/var/www/html/analysis_results2/final_analysis.txt', 'utf8');
     const cleanedMarkdown = data.replace(/---\n/g, '')
-    const questionTitleMatch = cleanedMarkdown.match(/(#+)\s+.*How do scammers exploit the affordances of new communication technologies to reach their targets\?\*\*/i);
+    const questionTitleMatch = cleanedMarkdown.match(/(#+)\s+.*How/i);
     if (!questionTitleMatch) {
         throw new Error('Question title not found');
     }
@@ -29,8 +29,8 @@ export const fetchanalysis = async () => {
 }
 
 export const fetchanalysiszh = async () => {
-    // noStore();
-    const data = fs.readFileSync('src/datatext/final_analysis_zh.txt', 'utf8');
+    noStore();
+    const data = fs.readFileSync('/var/www/html/zh.txt', 'utf8');
     const cleanedMarkdown = data.replace(/---\n/g, '')
     const questionTitleMatch = cleanedMarkdown.match(/^(#+).*\d+.*\n/m);
     if (!questionTitleMatch) {
@@ -45,14 +45,14 @@ export const fetchanalysiszh = async () => {
 
 export const fetchcontent = async () => {
     // noStore();
-    const data = fs.readFileSync('src/datatext/typicalcase.txt', 'utf8');
+    const data = fs.readFileSync('/root/cityuscampage/CityU-Scam-Page/src/datatext/typicalcase.txt', 'utf8');
     const cases = data.trim()
     return cases;
 }
 
 export const fetchcontentzh = async () => {
     // noStore();
-    const data = fs.readFileSync('src/datatext/typicalcasezh.txt', 'utf8');
+    const data = fs.readFileSync('/root/cityuscampage/CityU-Scam-Page/src/datatext/typicalcasezh.txt', 'utf8');
     const cases = data.trim()
     return cases;
 }

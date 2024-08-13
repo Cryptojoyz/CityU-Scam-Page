@@ -4,10 +4,10 @@ import Menubar from "@/components/Menubar";
 import { fetchanalysis, fetchcontent } from "@/lib/fetchcontent";
 import {ContactUs} from "@/components/ContactUs.jsx";
 
-const analysisData = await fetchanalysis();
-const typicalcase = await fetchcontent();
 
-export default function Home() {
+export default async function Home() {
+  const analysisData = await fetchanalysis();
+  const typicalcase = await fetchcontent();
   return (
     <main>
       <Navbar />

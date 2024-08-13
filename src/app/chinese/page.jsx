@@ -6,10 +6,10 @@ import {ContactUszh} from "@/components/ContactUs.jsx";
 import Menubarzh from "@/components/Menubarzh";
 
 
-const analysisData = await fetchanalysiszh();
-const typicalcase = await fetchcontentzh();
+export default async function Chinese () {
 
-export default function Chinese () {
+  const analysisData = await fetchanalysiszh();
+  const typicalcase = await fetchcontentzh();
   return (
     <div>
     <Navbarzh />

@@ -116,7 +116,7 @@ const Menubarzh = ({ analysisData, typicalcase}) => {
 
             <div className="flex pt-8 justify-center flex-col items-center">
                     {title && <strong className='text-4xl text-center mb-8 max-w-5xl'>{title}</strong>}
-                <div className='prose prose-h1:text-center justify-center'>
+                <div className='prose prose-h1:text-center justify-center' style={{ minHeight: '25rem' }}>
                     <ReactMarkdown>{content}</ReactMarkdown>
                 </div>
             </div>
